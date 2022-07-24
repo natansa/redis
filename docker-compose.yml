@@ -1,0 +1,13 @@
+﻿version: '3.4'
+
+services:
+
+    redis:
+      container_name: redis
+      hostname: redis
+      image: "redis:alpine"
+      #command: redis-server --requirepass Rec2aw2&fruj
+      ports:
+       - "6379:6379"
+      environment:
+      - REDIS_REPLICATION_MODE=master
